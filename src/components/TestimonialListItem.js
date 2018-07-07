@@ -39,7 +39,7 @@ const TestimonialListItem = ({ classes, testimonial }) => {
   );
 };
 
-TestimonialList.propTypes = {
+TestimonialListItem.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
