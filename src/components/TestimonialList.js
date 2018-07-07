@@ -1,15 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import Typography from "@material-ui/core/Typography";
 import { withStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
-import ListSubheader from "@material-ui/core/ListSubheader";
 
 import TestimonialListItem from "./TestimonialListItem";
 const styles = theme => ({
   gridList: {
     height: 450
+  },
+  icon: {
+    color: "rgba(255, 255, 255, 0.54)"
   }
 });
 
@@ -38,10 +41,15 @@ const TestimonialList = ({ classes }) => {
   return (
     <GridList cellHeight={180} className={classes.gridList}>
       <GridListTile key="Subheader" cols={2} style={{ height: "auto" }}>
-        <ListSubheader component="div">Testimonial</ListSubheader>
+        <Typography gutterBottom variant="display3" component="h2">
+          Testimonials
+        </Typography>
       </GridListTile>
+
       {testimonialList.map(testimonial => (
-        <TestimonialListItem testimonial={testimonial} />
+        <GridListTile key={testimonial.img}>
+          <TestimonialListItem testimonial={testimonial} />
+        </GridListTile>
       ))}
     </GridList>
   );
