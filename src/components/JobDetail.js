@@ -15,14 +15,14 @@ const styles = theme => ({
   }
 });
 
-const data = dataList.find(d => d.title === "Ninja");
-const { title, imageUrl, description } = data;
-const JobDetail = ({ classes }) => {
+const JobDetail = ({ classes, match }) => {
+  const data = dataList.find(d => d.id === match.params.id);
+  const { title, imageUrl, description } = data;
   return (
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <Typography variant="display3" gutterBottom>
+          <Typography variant="display4" gutterBottom>
             {title}
           </Typography>
           <img src={imageUrl} alt={title} />

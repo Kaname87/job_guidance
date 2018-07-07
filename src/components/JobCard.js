@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-const JobCard = ({ title, imageUrl, description }) => {
+const JobCard = ({ id, title, imageUrl, description }) => {
   return (
     <Card>
       <CardMedia
@@ -27,7 +27,7 @@ const JobCard = ({ title, imageUrl, description }) => {
       </CardContent>
       <CardActions>
         <Button size="small" color="primary" target="_blank">
-          <Link to="/detail">See Detail</Link>
+          <Link to={`/job_detail/${id}`}>See Detail</Link>
         </Button>
       </CardActions>
     </Card>

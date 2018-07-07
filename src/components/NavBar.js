@@ -2,7 +2,7 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-
+import { Link } from "react-router-dom";
 import JobSearch from "./JobSearch";
 
 const NavBar = () => {
@@ -11,7 +11,15 @@ const NavBar = () => {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit">
-            Job Guidance
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "white"
+              }}
+            >
+              Job Guidance
+            </Link>
           </Typography>
           <JobSearch />
         </Toolbar>
