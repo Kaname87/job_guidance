@@ -8,6 +8,7 @@ import dataList from "./../data.json";
 const jobList = dataList.map(data => (
   <Grid item xs={12} sm={6} lg={4} xl={3}>
     <JobCard
+      id={data.id}
       title={data.title}
       description={data.description}
       imageUrl={data.imageUrl}
