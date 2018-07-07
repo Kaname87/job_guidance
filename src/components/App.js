@@ -1,15 +1,13 @@
 import React, { Component } from "react";
-
-import NavBar from "./NavBar";
-import JobList from "./JobList";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import JobGuidanceApp from "./JobGuidanceApp";
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <NavBar />
-        <JobList />
-      </div>
+      <Router>
+        <Route path="/" component={JobGuidanceApp} />
+      </Router>
     );
   }
 }
