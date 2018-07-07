@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import JobList from "./JobList";
+import JobDetail from "./JobDetail";
 import NavBar from "./NavBar";
 
 class App extends Component {
@@ -9,7 +10,8 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
-          <Route path="/" component={JobList} />
+          <Route exact path="/" component={JobList} />
+          <Route path="/detail" component={JobDetail} />
         </div>
       </Router>
     );

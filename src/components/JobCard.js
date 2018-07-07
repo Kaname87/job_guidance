@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -26,7 +27,7 @@ const JobCard = ({ title, imageUrl, description }) => {
       </CardContent>
       <CardActions>
         <Button size="small" color="primary" target="_blank">
-          See Detail
+          <Link to="/detail">See Detail</Link>
         </Button>
       </CardActions>
     </Card>
