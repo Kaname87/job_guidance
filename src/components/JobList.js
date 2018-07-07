@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import Grid from "@material-ui/core/Grid";
-// import TextField from "@material-ui/core/TextField";
 
-import JobCard from "./JobCard";
+import JobListItem from "./JobListItem";
 import dataList from "./../data.json";
 
 const jobList = dataList.map(data => (
   <Grid item xs={12} sm={6} lg={4} xl={3}>
-    <JobCard
+    <JobListItem
       id={data.id}
       title={data.title}
       description={data.description}
