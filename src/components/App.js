@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import Button from "@material-ui/core/Button";
+import NavBar from "./NavBar";
 
 class App extends Component {
   render() {
     return (
-      <Button variant="contained" color="primary">
-        Hello World
-      </Button>
+      <div>
+        <NavBar />
+      </div>
     );
   }
 }
