@@ -7,7 +7,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
-const JobCard = ({ id, title, imageUrl, description }) => {
+const JobListItem = ({ id, title, imageUrl, description }) => {
   return (
     <Card>
       <CardMedia
@@ -34,4 +34,4 @@ const JobCard = ({ id, title, imageUrl, description }) => {
   );
 };
 
-export default JobCard;
+export default JobListItem;
