@@ -18,7 +18,7 @@ const NavBar = () => {
                 color: "white"
               }}
             >
-              Job Guidance
+              JobPedia
             </Link>
           </Typography>
           <JobSearch />
