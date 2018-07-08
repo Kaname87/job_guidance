@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <Router>
         <ScrollToTop>
-          <div>
+          <div style={{ paddingTop: "3.5em" }}>
             <NavBar />
             <Route exact path="/" component={JobList} />
             <Route path="/job_detail/:id" component={JobDetail} />
