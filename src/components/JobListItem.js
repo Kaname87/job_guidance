@@ -6,20 +6,25 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import ThumbUpIcon from "@material-ui/icons/ThumbUp";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 
 class JobListItem extends Component {
   state = {
+    upVoteClicked: false,
     upVoteNum: 0
   };
 
   handleUpVote = e =>
     this.setState(prevState => ({
+      upVoteClicked: true,
       upVoteNum: prevState.upVoteNum + 1
     }));
 
   render() {
     const { id, title, imageUrl, description } = this.props;
+
+    const favButtonColor = this.state.upVoteClicked ? "red" : "grey";
+
     return (
       <Card>
         <CardMedia
@@ -48,7 +53,7 @@ class JobListItem extends Component {
               target="_blank"
               onClick={this.handleUpVote}
             >
-              <ThumbUpIcon />
+              <FavoriteIcon style={{ color: favButtonColor }} />
             </Button>
             <span
               style={{ fontFamily: "Roboto , Helvetica , Arial , sans-serif" }}
