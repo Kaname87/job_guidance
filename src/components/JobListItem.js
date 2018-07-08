@@ -8,6 +8,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 
+import ChipList from "./ChipList";
+
 class JobListItem extends Component {
   state = {
     upVoteClicked: false,
@@ -42,6 +44,7 @@ class JobListItem extends Component {
           </Typography>
           <Typography component="p">{description}</Typography>
         </CardContent>
+        <ChipList jobId={id} />
         <CardActions style={{ display: "flex" }}>
           <Button size="small" color="primary" target="_blank">
             <Link to={`/job_detail/${id}`}>See Detail</Link>
