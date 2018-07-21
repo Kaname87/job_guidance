@@ -5,7 +5,7 @@ import JobListItem from "./JobListItem";
 import dataList from "./../data.json";
 
 const jobList = dataList.map(data => (
-  <Grid item xs={12} sm={6} lg={4} xl={3}>
+  <Grid item xs={12} sm={6} lg={4} xl={3} key={data.id}>
     <JobListItem
       id={data.id}
       title={data.title}
